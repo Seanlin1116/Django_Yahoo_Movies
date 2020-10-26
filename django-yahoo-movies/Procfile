@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath yahoo_movies yahoo_movies.wsgi

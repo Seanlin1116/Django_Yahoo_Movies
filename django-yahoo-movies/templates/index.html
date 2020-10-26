@@ -1,0 +1,38 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static " css/mystyle.css " %}">
+</head>
+
+<body>
+    <h1>Yahoo奇摩本周新片</h1>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
+    <div class="container">
+        {% for mov in Movies %}
+        <div class="well">
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="{{ mov.poster_url }}" width="200px">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">{{ mov.cht_name }}</h4>
+                    <h4 class="media-heading">{{ mov.eng_name }}</h4>
+                    <ul class="list-inline list-unstyled">
+                        <li><span><i class="glyphicon glyphicon-calendar"></i>上映日期 {{ mov.release_date }}</span></li>
+                        <li>|</li>
+                        <span><i class="glyphicon glyphicon-star"></i>期待度 {{ mov.expectation }}</span>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
