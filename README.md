@@ -21,7 +21,7 @@ Crawler/crawler.py 裡使用簡單的 Beautifulsoup 爬下來的網站
 ### Database的部分
 為Postgresql(heroku的部屬不能使用預設的的SQlite
 
-###執行檔案
+### 執行檔案
 python manage.py runserver 即可啟用host
 python manage.py migrate 則會將資料的schema建構
 python crawler.py 即可將爬蟲爬進資料庫
